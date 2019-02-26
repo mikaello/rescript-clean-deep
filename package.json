@@ -1,0 +1,24 @@
+{
+  "name": "bs-clean-deep",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "mikaello",
+  "description": "Remove falsy, empty or nullable values from javascript objects",
+  "homepage": "https://github.com/mikaello/bs-clean-deep",
+  "repository": "https://github.com/mikaello/bs-clean-deep",
+  "bugs": "https://github.com/mikaello/bs-clean-deep/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^4.0.18"
+  },
+  "dependencies": {
+    "clean-deep": "^3.0.2"
+  }
+}
