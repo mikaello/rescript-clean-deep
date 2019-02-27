@@ -1,1 +1,1 @@
-Js.log("This is CleanDeep!");
+let cleanDeep = jsObject => jsObject;

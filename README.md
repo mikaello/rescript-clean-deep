@@ -20,6 +20,7 @@ Then add `bs-clean-deep` as a dependency to `bsconfig.json`:
 
 ```reason
 let jsObject = [%bs.raw {|
+{
   bar: {},
   baz: null,
   biz: 'baz',
@@ -30,6 +31,7 @@ let jsObject = [%bs.raw {|
     baz: 'boz',
     txi: ''
   }
+}
 |}];
 
 let cleaned = CleanDeep.cleanDeep(jsObject);
@@ -40,4 +42,4 @@ Js.log(cleaned);
 
 ## Contribute
 
-If you find bugs or there are updates in [clean-deep](https://github.com/nunofgs/clean-deep), feel free to open an issue or PR. If you are upgrading _clean-deep_, please use yarn so `yarn.lock` is updated.
+If you find bugs or there are updates in [clean-deep](https://github.com/nunofgs/clean-deep), feel free to open an issue or PR. If you are upgrading any dependencies, please use yarn so `yarn.lock` is updated.
