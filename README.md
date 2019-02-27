@@ -1,5 +1,7 @@
 # bs-clean-deep
 
+[![Build Status](https://travis-ci.org/mikaello/bs-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/bs-clean-deep)
+
 Complete bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for removing falsy, empty or nullable values from javascript objects.
 
 ## Getting started
