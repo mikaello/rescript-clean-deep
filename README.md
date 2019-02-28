@@ -14,7 +14,7 @@ yarn add bs-clean-deep
 
 Then add `bs-clean-deep` as a dependency to `bsconfig.json`:
 
-```git
+```diff
 "bs-dependencies": [
 +  "bs-clean-deep": "latest"
 ]
