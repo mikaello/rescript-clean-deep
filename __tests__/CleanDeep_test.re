@@ -1,7 +1,8 @@
 open Jest;
 open Expect;
+open CleanDeep;
 
-describe("cleanDeep()", () =>
+describe("cleanDeep()", () => {
   test("should pick defined values from the object", () => {
     let jsObject = [%bs.raw
       {|
@@ -13,7 +14,7 @@ describe("cleanDeep()", () =>
           baz: true,
           biz: false,
           buz: null,
-          net: '',
+          net: "",
           qux: 100
 
         }
@@ -21,7 +22,7 @@ describe("cleanDeep()", () =>
       |}
     ];
 
-    expect(CleanDeep.cleanDeep(jsObject))
+    expect(cleanDeep(jsObject))
     |> toEqual(
          [%bs.raw
            {|
@@ -35,5 +36,197 @@ describe("cleanDeep()", () =>
            |}
          ],
        );
-  })
-);
+  });
+
+  test("should clean arrays", () => {
+    let jsObject = [%bs.raw
+      {|
+      {
+        foo: [{
+          bar: undefined,
+          baz: "",
+          biz: 0
+        }]
+      }
+      |}
+    ];
+
+    expect(cleanDeep(jsObject))
+    |> toEqual(
+         [%bs.raw
+           {|
+           {
+             foo: [{
+               biz: 0
+             }]
+           }
+          |}
+         ],
+       );
+  });
+
+  test("should include non plain objects", () => {
+    let jsObject = [%bs.raw
+      {| {
+      foo: {
+        bar: new Date(0),
+        biz: undefined
+      }
+    }
+    |}
+    ];
+
+    expect(cleanDeep(jsObject))
+    |> toEqual(
+         [%bs.raw
+           {|
+      {
+      foo: {
+        bar: new Date(0)
+      }
+    }
+    |}
+         ],
+       );
+  });
+
+  test("should include empty objects if `emptyObjects` is `false`", () => {
+    let jsObject = [%bs.raw
+      {| {
+      biz: {
+        baz: 123
+      },
+      foo: {
+        bar: {}
+      }
+    }
+    |}
+    ];
+
+    expect(cleanDeepWithOptions(jsObject, ~emptyObjects=false, ()))
+    |> toEqual(
+         [%bs.raw
+           {| {
+      biz: {
+        baz: 123
+      },
+      foo: {
+        bar: {}
+      }
+    }
+    |}
+         ],
+       );
+  });
+
+  test("should include empty arrays if `emptyArrays` is `false`", () => {
+    let jsObject = [%bs.raw
+      {| {
+      biz: {
+        bar: [],
+        baz: 123
+      },
+      foo: []
+    }
+    |}
+    ];
+
+    expect(cleanDeepWithOptions(jsObject, ~emptyArrays=false, ()))
+    |> toEqual(
+         [%bs.raw
+           {| {
+      biz: {
+        bar: [],
+        baz: 123
+      },
+      foo: []
+    }
+    |}
+         ],
+       );
+  });
+
+  test("should include empty strings if `emptyStrings` is `false`", () => {
+    let jsObject = [%bs.raw
+      {| {
+      foo: {
+        bar: "",
+        biz: 123
+      }
+    }
+        |}
+    ];
+
+    expect(cleanDeepWithOptions(jsObject, ~emptyStrings=false, ()))
+    |> toEqual(
+         [%bs.raw
+           {| {
+      foo: {
+        bar: "",
+        biz: 123
+      }
+    }
+    |}
+         ],
+       );
+  });
+
+  test("should include null values if `nullValues` is `false`", () => {
+    let jsObject = [%bs.raw
+      {| {
+      foo: {
+        bar: null,
+        biz: 123
+      }
+    }
+        |}
+    ];
+
+    expect(cleanDeepWithOptions(jsObject, ~nullValues=false, ()))
+    |> toEqual(
+         [%bs.raw
+           {| {
+      foo: {
+        bar: null,
+        biz: 123
+      }
+    }
+    |}
+         ],
+       );
+  });
+
+  test("should include undefined values if `undefinedValues` is `false`", () => {
+    let jsObject = [%bs.raw
+      {| {
+      foo: {
+        bar: undefined,
+        biz: 123,
+        qux: [
+          undefined,
+          {},
+          true
+        ]
+      }
+    }
+        |}
+    ];
+
+    expect(cleanDeepWithOptions(jsObject, ~undefinedValues=false, ()))
+    |> toEqual(
+         [%bs.raw
+           {| {
+      foo: {
+        bar: undefined,
+        biz: 123,
+        qux: [
+          undefined,
+          true
+        ]
+      }
+    }
+    |}
+         ],
+       );
+  });
+});
