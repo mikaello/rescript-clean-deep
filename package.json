@@ -12,7 +12,7 @@
     "BuckleScript"
   ],
   "author": "mikaello",
-  "description": "Remove falsy, empty or nullable values from javascript objects",
+  "description": "Remove empty or nullable values from javascript objects",
   "homepage": "https://github.com/mikaello/bs-clean-deep",
   "repository": "https://github.com/mikaello/bs-clean-deep",
   "bugs": "https://github.com/mikaello/bs-clean-deep/issues",
