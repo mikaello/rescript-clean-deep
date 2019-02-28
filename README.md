@@ -4,7 +4,7 @@
 
 🚧 **UNDER CONSTRUCTION** 🚧
 
-Bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for removing falsy, empty or nullable values from javascript objects.
+Bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for removing empty or nullable values from javascript objects.
 
 ## Getting started
 
