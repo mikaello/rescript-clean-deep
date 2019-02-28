@@ -38,10 +38,15 @@ let jsObject = [%bs.raw {|
 }
 |}];
 
-let cleaned = CleanDeep.cleanDeep(jsObject);
+let cleaned1 = CleanDeep.cleanDeep(jsObject);
 
-Js.log(cleaned);
+Js.log(cleaned1);
 /* => { biz: 'baz', qux: { baz: 'boz' } } */
+
+let cleaned2 = CleanDeep.cleanDeepWithOptions(jsObject, ~emptyStrings=false, ());
+
+Js.log(cleaned2);
+/* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } *
 ```
 
 ## Contribute
