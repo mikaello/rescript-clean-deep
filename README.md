@@ -16,7 +16,7 @@ Then add `bs-clean-deep` as a dependency to `bsconfig.json`:
 
 ```diff
 "bs-dependencies": [
-+  "bs-clean-deep": "latest"
++  "bs-clean-deep"
 ]
 ```
 
@@ -46,7 +46,7 @@ Js.log(cleaned1);
 let cleaned2 = CleanDeep.cleanDeepWithOptions(jsObject, ~emptyStrings=false, ());
 
 Js.log(cleaned2);
-/* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } *
+/* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
 ```
 
 ## Contribute
