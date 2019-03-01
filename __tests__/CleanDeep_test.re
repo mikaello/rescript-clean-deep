@@ -1,6 +1,5 @@
 open Jest;
 open Expect;
-open CleanDeep;
 
 describe("cleanDeep()", () => {
   test("should pick defined values from the object", () => {
@@ -22,7 +21,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeep(jsObject))
+    expect(CleanDeep.cleanDeep(jsObject))
     |> toEqual(
          [%bs.raw
            {|
@@ -51,7 +50,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeep(jsObject))
+    expect(CleanDeep.cleanDeep(jsObject))
     |> toEqual(
          [%bs.raw
            {|
@@ -77,7 +76,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeep(jsObject))
+    expect(CleanDeep.cleanDeep(jsObject))
     |> toEqual(
          [%bs.raw
            {|
@@ -105,7 +104,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeepWithOptions(jsObject, ~emptyObjects=false, ()))
+    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~emptyObjects=false, ()))
     |> toEqual(
          [%bs.raw
            {|
@@ -135,7 +134,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeepWithOptions(jsObject, ~emptyArrays=false, ()))
+    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~emptyArrays=false, ()))
     |> toEqual(
          [%bs.raw
            {|
@@ -163,7 +162,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeepWithOptions(jsObject, ~emptyStrings=false, ()))
+    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~emptyStrings=false, ()))
     |> toEqual(
          [%bs.raw
            {|
@@ -190,7 +189,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeepWithOptions(jsObject, ~nullValues=false, ()))
+    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~nullValues=false, ()))
     |> toEqual(
          [%bs.raw
            {|
@@ -222,7 +221,9 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(cleanDeepWithOptions(jsObject, ~undefinedValues=false, ()))
+    expect(
+      CleanDeep.cleanDeepWithOptions(jsObject, ~undefinedValues=false, ()),
+    )
     |> toEqual(
          [%bs.raw
            {|

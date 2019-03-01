@@ -23,6 +23,8 @@ Then add `bs-clean-deep` as a dependency to `bsconfig.json`:
 ## Example
 
 ```reason
+open BsCleanDeep;
+
 let jsObject = [%bs.raw {|
 {
   bar: {},

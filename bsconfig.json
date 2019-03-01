@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "sources": [
     {
-      "dir": "src",
-      "public": "all"
+      "dir": "src"
     },
     {
       "dir": "__tests__",
