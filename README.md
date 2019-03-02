@@ -1,4 +1,4 @@
-# bs-clean-deep
+# (WIP) bs-clean-deep
 
 [![Build Status](https://travis-ci.org/mikaello/bs-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/bs-clean-deep)
 
@@ -40,14 +40,14 @@ let jsObject = [%bs.raw {|
 }
 |}];
 
-let cleaned1 = CleanDeep.cleanDeep(jsObject);
+let cleaned = CleanDeep.cleanDeep(jsObject);
 
-Js.log(cleaned1);
+Js.log(cleaned);
 /* => { biz: 'baz', qux: { baz: 'boz' } } */
 
-let cleaned2 = CleanDeep.cleanDeepWithOptions(jsObject, ~emptyStrings=false, ());
+let cleaned_keep_strings = jsObject |> CleanDeep.cleanDeep(~emptyStrings=false);
 
-Js.log(cleaned2);
+Js.log(cleaned_keep_strings);
 /* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
 ```
 
