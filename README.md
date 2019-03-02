@@ -1,9 +1,7 @@
-# (WIP) bs-clean-deep
+# bs-clean-deep
 
 [![NPM version](http://img.shields.io/npm/v/bs-clean-deep.svg)](https://www.npmjs.org/package/bs-clean-deep)
 [![Build Status](https://travis-ci.org/mikaello/bs-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/bs-clean-deep)
-
-🚧 **UNDER CONSTRUCTION** 🚧
 
 Bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for removing empty or nullable values from javascript objects.
 
