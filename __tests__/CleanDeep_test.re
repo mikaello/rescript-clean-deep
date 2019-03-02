@@ -104,7 +104,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~emptyObjects=false, ()))
+    expect(CleanDeep.cleanDeep(~emptyObjects=false, jsObject))
     |> toEqual(
          [%bs.raw
            {|
@@ -134,7 +134,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~emptyArrays=false, ()))
+    expect(CleanDeep.cleanDeep(~emptyArrays=false, jsObject))
     |> toEqual(
          [%bs.raw
            {|
@@ -162,7 +162,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~emptyStrings=false, ()))
+    expect(jsObject |> CleanDeep.cleanDeep(~emptyStrings=false))
     |> toEqual(
          [%bs.raw
            {|
@@ -189,7 +189,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(CleanDeep.cleanDeepWithOptions(jsObject, ~nullValues=false, ()))
+    expect(jsObject |> CleanDeep.cleanDeep(~nullValues=false))
     |> toEqual(
          [%bs.raw
            {|
@@ -221,9 +221,7 @@ describe("cleanDeep()", () => {
       |}
     ];
 
-    expect(
-      CleanDeep.cleanDeepWithOptions(jsObject, ~undefinedValues=false, ()),
-    )
+    expect(jsObject |> CleanDeep.cleanDeep(~undefinedValues=false))
     |> toEqual(
          [%bs.raw
            {|
