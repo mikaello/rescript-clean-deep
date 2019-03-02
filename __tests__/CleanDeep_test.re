@@ -1,3 +1,8 @@
+/*
+ These are the same tests as in the original clean-deep package:
+ https://github.com/nunofgs/clean-deep/blob/master/test/index_test.js
+  */
+
 open Jest;
 open Expect;
 
