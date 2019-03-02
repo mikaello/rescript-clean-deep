@@ -1,5 +1,6 @@
 # (WIP) bs-clean-deep
 
+[![NPM version](http://img.shields.io/npm/v/bs-clean-deep.svg)](https://www.npmjs.org/package/bs-clean-deep)
 [![Build Status](https://travis-ci.org/mikaello/bs-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/bs-clean-deep)
 
 🚧 **UNDER CONSTRUCTION** 🚧
