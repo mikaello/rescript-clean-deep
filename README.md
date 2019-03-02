@@ -45,9 +45,9 @@ let cleaned = CleanDeep.cleanDeep(jsObject);
 Js.log(cleaned);
 /* => { biz: 'baz', qux: { baz: 'boz' } } */
 
-let cleaned_keep_strings = jsObject |> CleanDeep.cleanDeep(~emptyStrings=false);
+let cleanedKeepStrings = jsObject |> CleanDeep.cleanDeep(~emptyStrings=false);
 
-Js.log(cleaned_keep_strings);
+Js.log(cleanedKeepStrings);
 /* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
 ```
 
