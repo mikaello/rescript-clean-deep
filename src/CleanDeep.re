@@ -8,7 +8,7 @@ type cleanDeepOptions = {
 };
 
 [@bs.module]
-external cleanDeep':
+external cleanDeep:
   (Js.t('dirtyJsObject), cleanDeepOptions) => Js.t('cleanedJsObject) =
   "clean-deep";
 
@@ -31,5 +31,5 @@ let cleanDeep =
       ~undefinedValues,
     );
 
-  cleanDeep'(jsObject, options);
+  cleanDeep(jsObject, options);
 };
