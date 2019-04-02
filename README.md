@@ -50,6 +50,8 @@ Js.log(cleanedKeepStrings);
 /* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
 ```
 
+See also [example-project](./example).
+
 ## Contribute
 
 If you find bugs or there are updates in [clean-deep](https://github.com/nunofgs/clean-deep), feel free to open an issue or PR. If you are upgrading any dependencies, please use yarn so `yarn.lock` is updated.
