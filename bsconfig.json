@@ -12,11 +12,11 @@
   ],
   "package-specs": {
     "module": "commonjs",
-    "in-source": true
+    "in-source": false
   },
   "suffix": ".bs.js",
   "bs-dependencies": [],
-  "bs-dev-dependencies": ["@glennsl/bs-jest"],
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "bsdoc"],
   "warnings": {
     "error": "+101"
   },

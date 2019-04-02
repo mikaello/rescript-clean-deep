@@ -5,6 +5,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
+    "docs": "bsdoc build bs-clean-deep",
     "pretest": "yarn run build",
     "test": "jest"
   },
@@ -19,7 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.8",
-    "bs-platform": "^5.0.0"
+    "bs-platform": "^5.0.0",
+    "bsdoc": "^0.1.4"
   },
   "dependencies": {
     "clean-deep": "^3.0.2"
