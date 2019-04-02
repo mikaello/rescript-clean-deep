@@ -1,0 +1,17 @@
+{
+  "name": "bs-clean-deep-demo",
+  "version": "0.1.0",
+  "sources": {
+    "dir" : "src",
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    "bs-clean-deep"
+  ],
+  "namespace": true,
+  "refmt": 3
+}
