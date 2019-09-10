@@ -18,8 +18,8 @@
   "bugs": "https://github.com/mikaello/bs-clean-deep/issues",
   "license": "MIT",
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.8",
-    "bs-platform": "^5.0.0"
+    "@glennsl/bs-jest": "^0.4.9",
+    "bs-platform": "^5.0.6"
   },
   "dependencies": {
     "clean-deep": "^3.0.5"
