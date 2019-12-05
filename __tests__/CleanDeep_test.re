@@ -244,4 +244,41 @@ describe("cleanDeep()", () => {
          ],
        );
   });
+
+  test("should remove custom values", () => {
+    let jsObject = [%bs.raw
+      {|
+      {
+        foo: {
+          bar: 'remove-this',
+          biz: 123,
+          qux: [
+            "this-as-well",
+            {},
+            true
+          ]
+        }
+      }
+      |}
+    ];
+
+    expect(
+      jsObject
+      |> CleanDeep.cleanDeep(~cleanValues=[|"remove-this", "this-as-well"|]),
+    )
+    |> toEqual(
+         [%bs.raw
+           {|
+           {
+             foo: {
+               biz: 123,
+               qux: [
+                 true
+               ]
+             }
+           }
+           |}
+         ],
+       );
+  });
 });
