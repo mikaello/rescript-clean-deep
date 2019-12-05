@@ -1,5 +1,6 @@
 [@bs.deriving abstract]
 type cleanDeepOptions = {
+  cleanKeys: array(string),
   cleanValues: array(string),
   emptyArrays: bool,
   emptyObjects: bool,
@@ -15,6 +16,7 @@ external cleanDeep:
 
 let cleanDeep =
     (
+      ~cleanKeys: array(string)=[||],
       ~cleanValues: array(string)=[||],
       ~emptyArrays: bool=true,
       ~emptyObjects: bool=true,
@@ -26,6 +28,7 @@ let cleanDeep =
     : Js.t('cleanedJsObject) => {
   let options =
     cleanDeepOptions(
+      ~cleanKeys,
       ~cleanValues,
       ~emptyArrays,
       ~emptyObjects,

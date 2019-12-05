@@ -11,6 +11,7 @@
  */
 let cleanDeep:
   (
+    ~cleanKeys: array(string)=?,
     ~cleanValues: array(string)=?,
     ~emptyArrays: bool=?,
     ~emptyObjects: bool=?,

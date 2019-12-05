@@ -709,10 +709,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-deep@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/clean-deep/-/clean-deep-3.1.0.tgz#248fabdd07b785652c951f50457853fba116c4d4"
-  integrity sha512-uVHIbqQ7RqIu5JOApJ6G28x0L58Uu8lt0ACOZd0EUWYxrqOgbTB4rM0/J3xFZ2ozKHQDMp2bhkhP/EM95CkYwA==
+clean-deep@3.2:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/clean-deep/-/clean-deep-3.2.0.tgz#344210fc09aba0c1a73fadffb61dc1740707ffbc"
+  integrity sha512-YA2SBZnGnbq1MnV17UsjKERWJiT/cTPjCtT7xSxZ/DTcPQGdfWKjlP/FfjKXTyfkMGUhNvOD1Oq7IzTbHfUv9g==
   dependencies:
     lodash.isempty "^4.4.0"
     lodash.isplainobject "^4.0.6"

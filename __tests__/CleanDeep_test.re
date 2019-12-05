@@ -281,4 +281,42 @@ describe("cleanDeep()", () => {
          ],
        );
   });
+
+  test("should remove custom keys", () => {
+    let jsObject = [%bs.raw
+      {|
+      {
+        foo: {
+          remove: 'hi there',
+          biz: 123,
+          qux: [
+            {},
+            true
+          ],
+          andThis: 'hello',
+          butNotThis: 'goodbye'
+        }
+      }
+      |}
+    ];
+
+    expect(
+      jsObject |> CleanDeep.cleanDeep(~cleanKeys=[|"remove", "andThis"|]),
+    )
+    |> toEqual(
+         [%bs.raw
+           {|
+           {
+             foo: {
+               biz: 123,
+               qux: [
+                 true
+               ],
+               butNotThis: 'goodbye'
+             }
+           }
+           |}
+         ],
+       );
+  });
 });
