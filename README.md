@@ -3,7 +3,8 @@
 [![NPM version](http://img.shields.io/npm/v/bs-clean-deep.svg)](https://www.npmjs.org/package/bs-clean-deep)
 [![Build Status](https://travis-ci.org/mikaello/bs-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/bs-clean-deep)
 
-Bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for removing empty or nullable values from javascript objects.
+Bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for
+removing empty or nullable values from javascript objects.
 
 ## Getting started
 
@@ -48,10 +49,18 @@ let cleanedKeepStrings = jsObject |> CleanDeep.cleanDeep(~emptyStrings=false);
 
 Js.log(cleanedKeepStrings);
 /* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
+
+let cleanedCustomValues = jsObject |> CleanDeep.cleanDeep(~cleanValues=[|"baz"|]);
+
+Js.log(cleanedCustomValues);
+/* => { qux: { baz: 'boz' } } */
 ```
 
 See also [example-project](./example).
 
 ## Contribute
 
-If you find bugs or there are updates in [clean-deep](https://github.com/nunofgs/clean-deep), feel free to open an issue or PR. If you are upgrading any dependencies, please use yarn so `yarn.lock` is updated.
+If you find bugs or there are updates in
+[clean-deep](https://github.com/nunofgs/clean-deep), feel free to open an issue
+or PR. If you are upgrading any dependencies, please use yarn so `yarn.lock` is
+updated.
