@@ -11,6 +11,7 @@
  */
 let cleanDeep:
   (
+    ~cleanValues: array(string)=?,
     ~emptyArrays: bool=?,
     ~emptyObjects: bool=?,
     ~emptyStrings: bool=?,
