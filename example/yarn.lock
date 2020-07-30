@@ -2,22 +2,22 @@
 # yarn lockfile v1
 
 
-bs-clean-deep@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/bs-clean-deep/-/bs-clean-deep-0.1.0.tgz#01cfe17d1706cfa1cecb80c7b16b695e2683f758"
-  integrity sha512-W6zbZIHwDUylG4oBNAt+98tkMXOgD3MPCFPnQZdsz1XvXj17cY23vhgTmGON2TbiQc3vvm1bYSo3LjZhIe5PdQ==
+bs-clean-deep@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/bs-clean-deep/-/bs-clean-deep-1.0.6.tgz#dcc6febef7c788ace8fd4609a18c5c2f5d3da71d"
+  integrity sha512-TJ5vRrzsojl8um+FzhoD2ITDgNZAFLImk3T17MswXEQqp5JNESjeyCFY2vI3p9jMRRseboOnz8YFOFzZhvYv8Q==
   dependencies:
-    clean-deep "^3.0.2"
+    clean-deep "3.3.0"
 
-bs-platform@^5:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.0.tgz#f9fded818bafc3891aeb85eb4e0d95b8d8f8b4d7"
-  integrity sha512-zxLobdIaf/r7go47hOgxcd6C0ANh7MYMEtZNb9Al7JdoekzFZI50F4GpZpP8kMh9Z+M5PoPE1WuryT4S8mT8Kg==
+bs-platform@8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-8.1.1.tgz#7470b67f8d0d4385b080c2552c54c5fe9f314ece"
+  integrity sha512-33wDWYteJQIhEfEpayvXK8eS2TdMtzQHFZMoMjDEY+NB2vTKWQFGoggOrJ4c7fvRzvQ2igwmc7idrxgMz39Qog==
 
-clean-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/clean-deep/-/clean-deep-3.0.2.tgz#1b7096822f289cc491ca6d85af5c028cbb22fc23"
-  integrity sha512-sLUtFxYtHc3jM9pmwyYXOLln0nnQ1OhFrefQ7nqUlva1crHDbi4gVO+nnMSm5jztFXIRDMt+kMNh0mOscbARow==
+clean-deep@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/clean-deep/-/clean-deep-3.3.0.tgz#00509a2cb431fa83fb202aa759534681f0309172"
+  integrity sha512-zblSorO16fXSDnBU9SQay+WL6TLM8Lkh1pKiuspu/Ntgy5BPDXORZKj3F/6fgcBZ7c172Ppy8xWRo7J4D/mNfQ==
   dependencies:
     lodash.isempty "^4.4.0"
     lodash.isplainobject "^4.0.6"
