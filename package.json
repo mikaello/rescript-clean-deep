@@ -1,6 +1,6 @@
 {
   "name": "bs-clean-deep",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -22,6 +22,6 @@
     "bs-platform": "^7.2.2"
   },
   "dependencies": {
-    "clean-deep": "3.2"
+    "clean-deep": "3.3.0"
   }
 }
