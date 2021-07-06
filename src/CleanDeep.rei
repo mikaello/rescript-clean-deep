@@ -1,4 +1,4 @@
-/** [bs-clean-deep] is bindings for {{: https://github.com/nunofgs/clean-deep } [clean-deep]},
+/** [rescript-clean-deep] is bindings for {{: https://github.com/nunofgs/clean-deep } [clean-deep]},
     a library for removing empty or nullable values from javascript objects.
 
     [clean-deep] uses lodash ([isempty] and [isplainobject]) in addition to

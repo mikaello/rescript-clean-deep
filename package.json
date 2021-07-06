@@ -1,6 +1,6 @@
 {
-  "name": "bs-clean-deep",
-  "version": "1.0.6",
+  "name": "rescript-clean-deep",
+  "version": "1.0.0",
   "scripts": {
     "build": "rescript build",
     "start": "rescript build -w",
@@ -9,13 +9,13 @@
     "test": "jest"
   },
   "keywords": [
-    "BuckleScript"
+    "rescript"
   ],
   "author": "mikaello",
-  "description": "Remove empty or nullable values from javascript objects",
-  "homepage": "https://github.com/mikaello/bs-clean-deep",
-  "repository": "https://github.com/mikaello/bs-clean-deep",
-  "bugs": "https://github.com/mikaello/bs-clean-deep/issues",
+  "description": "Remove empty or nullable values from JavaScript objects",
+  "homepage": "https://github.com/mikaello/rescript-clean-deep",
+  "repository": "https://github.com/mikaello/rescript-clean-deep",
+  "bugs": "https://github.com/mikaello/rescript-clean-deep/issues",
   "license": "MIT",
   "devDependencies": {
     "@glennsl/bs-jest": "^0.7.0",

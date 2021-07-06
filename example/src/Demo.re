@@ -1,6 +1,6 @@
-open BsCleanDeep;
+open RescriptCleanDeep;
 
-Js.log("Demo of 'bs-clean-deep'\n");
+Js.log("Demo of 'rescript-clean-deep'\n");
 
 let s = [%bs.raw {| { emptystring: '', foo: 3, emptyobject: {} } |}];
 
