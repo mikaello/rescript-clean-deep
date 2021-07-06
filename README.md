@@ -1,29 +1,29 @@
-# bs-clean-deep
+# rescript-clean-deep
 
-[![NPM version](http://img.shields.io/npm/v/bs-clean-deep.svg)](https://www.npmjs.org/package/bs-clean-deep)
-[![Build Status](https://travis-ci.org/mikaello/bs-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/bs-clean-deep)
+[![NPM version](http://img.shields.io/npm/v/rescript-clean-deep.svg)](https://www.npmjs.org/package/rescript-clean-deep)
+[![Build Status](https://travis-ci.org/mikaello/rescript-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/rescript-clean-deep)
 
-Bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for
+ReScript bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for
 removing empty or nullable values from javascript objects.
 
 ## Getting started
 
 ```
-yarn add bs-clean-deep
+yarn add rescript-clean-deep
 ```
 
-Then add `bs-clean-deep` as a dependency to `bsconfig.json`:
+Then add `rescript-clean-deep` as a dependency to `bsconfig.json`:
 
 ```diff
 "bs-dependencies": [
-+  "bs-clean-deep"
++  "rescript-clean-deep"
 ]
 ```
 
 ## Example
 
 ```reason
-open BsCleanDeep;
+open RescriptCleanDeep;
 
 let jsObject = [%bs.raw {|
 {
@@ -40,17 +40,17 @@ let jsObject = [%bs.raw {|
 }
 |}];
 
-let cleaned = CleanDeep.cleanDeep(jsObject);
+let cleaned = CleanDeep.cleanDeep(jsObject, ());
 
 Js.log(cleaned);
 /* => { biz: 'baz', qux: { baz: 'boz' } } */
 
-let cleanedKeepStrings = jsObject |> CleanDeep.cleanDeep(~emptyStrings=false);
+let cleanedKeepStrings = jsObject->CleanDeep.cleanDeep(~emptyStrings=false, ());
 
 Js.log(cleanedKeepStrings);
 /* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
 
-let cleanedCustomValues = jsObject |> CleanDeep.cleanDeep(~cleanValues=[|"baz"|]);
+let cleanedCustomValues = jsObject->CleanDeep.cleanDeep(~cleanValues=[|"baz"|], ());
 
 Js.log(cleanedCustomValues);
 /* => { qux: { baz: 'boz' } } */

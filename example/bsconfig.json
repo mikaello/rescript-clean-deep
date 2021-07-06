@@ -1,5 +1,5 @@
 {
-  "name": "bs-clean-deep-demo",
+  "name": "rescript-clean-deep-demo",
   "version": "0.1.0",
   "sources": {
     "dir" : "src"
@@ -10,7 +10,7 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
-    "bs-clean-deep"
+    "rescript-clean-deep"
   ],
   "warnings": {
     "number": "+A-42-48",
