@@ -40,17 +40,17 @@ let jsObject = [%bs.raw {|
 }
 |}];
 
-let cleaned = CleanDeep.cleanDeep(jsObject);
+let cleaned = CleanDeep.cleanDeep(jsObject, ());
 
 Js.log(cleaned);
 /* => { biz: 'baz', qux: { baz: 'boz' } } */
 
-let cleanedKeepStrings = jsObject |> CleanDeep.cleanDeep(~emptyStrings=false);
+let cleanedKeepStrings = jsObject->CleanDeep.cleanDeep(~emptyStrings=false, ());
 
 Js.log(cleanedKeepStrings);
 /* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
 
-let cleanedCustomValues = jsObject |> CleanDeep.cleanDeep(~cleanValues=[|"baz"|]);
+let cleanedCustomValues = jsObject->CleanDeep.cleanDeep(~cleanValues=[|"baz"|], ());
 
 Js.log(cleanedCustomValues);
 /* => { qux: { baz: 'boz' } } */
