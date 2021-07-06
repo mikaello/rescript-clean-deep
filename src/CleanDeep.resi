@@ -17,5 +17,6 @@ let cleanDeep: (
   ~emptyStrings: bool=?,
   ~nullValues: bool=?,
   ~undefinedValues: bool=?,
+  ~naNValues: bool=?,
   unit,
 ) => 'cleanedJsObject

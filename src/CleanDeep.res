@@ -7,6 +7,7 @@ type cleanDeepOptions = {
   emptyStrings: bool,
   nullValues: bool,
   undefinedValues: bool,
+  @as("NaNValues") naNValues: bool,
 }
 
 @module
@@ -21,6 +22,7 @@ let cleanDeep = (
   ~emptyStrings: bool=true,
   ~nullValues: bool=true,
   ~undefinedValues: bool=true,
+  ~naNValues: bool=false,
   (),
 ): 'cleanedJsObject => {
   let options = cleanDeepOptions(
@@ -31,6 +33,7 @@ let cleanDeep = (
     ~emptyStrings,
     ~nullValues,
     ~undefinedValues,
+    ~naNValues,
   )
 
   cleanDeep(jsObject, options)

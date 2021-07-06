@@ -1,6 +1,6 @@
 {
   "name": "rescript-clean-deep",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "rescript build",
     "start": "rescript build -w",
@@ -22,6 +22,6 @@
     "rescript": "^9.1.4"
   },
   "dependencies": {
-    "clean-deep": "3.3.0"
+    "clean-deep": "^3.4.0"
   }
 }

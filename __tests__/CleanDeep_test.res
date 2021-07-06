@@ -266,4 +266,39 @@ describe("cleanDeep()", () => {
            `),
     )
   })
+
+  test("should not remove NaN by default", () => {
+    let jsObject = %raw(`
+      {
+        remi: 'hi there',
+        biz: NaN,
+      }
+      `)
+
+    expect(jsObject->CleanDeep.cleanDeep()) |> toEqual(
+      %raw(`
+           {
+             remi: 'hi there',
+             biz: NaN,
+           }
+           `),
+    )
+  })
+
+  test("should remove NaN", () => {
+    let jsObject = %raw(`
+      {
+        remi: 'hi there',
+        biz: NaN,
+      }
+      `)
+
+    expect(jsObject->CleanDeep.cleanDeep(~naNValues=true, ())) |> toEqual(
+      %raw(`
+           {
+             remi: 'hi there',
+           }
+           `),
+    )
+  })
 })
