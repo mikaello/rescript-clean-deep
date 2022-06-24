@@ -1,7 +1,7 @@
 # rescript-clean-deep
 
 [![NPM version](http://img.shields.io/npm/v/rescript-clean-deep.svg)](https://www.npmjs.org/package/rescript-clean-deep)
-[![Build Status](https://travis-ci.org/mikaello/rescript-clean-deep.svg?branch=master)](https://travis-ci.org/mikaello/rescript-clean-deep)
+[![Build Status](https://app.travis-ci.com/mikaello/rescript-clean-deep.svg?branch=master)](https://app.travis-ci.com/github/mikaello/rescript-clean-deep)
 
 ReScript bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for
 removing empty or nullable values from javascript objects.
