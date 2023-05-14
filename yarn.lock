@@ -293,12 +293,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@glennsl/rescript-jest@0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@glennsl/rescript-jest/-/rescript-jest-0.9.2.tgz#d896d3b1bec5caa93ec26a49d2794a5883ab963f"
-  integrity sha512-Qy7O5/vYWgfVyXveFAcOy0Wa0tZ1hUVdSmZJgmblnHvZYyeVJOCIxdSk8vvjBF/gujlvGBFcSeHMWs6Bx22luQ==
+"@glennsl/rescript-jest@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@glennsl/rescript-jest/-/rescript-jest-0.10.0.tgz#8b8ddb768ac65a1d9792bd0a9243a55999625678"
+  integrity sha512-rUhCuyNi8Em0N7ubrmdz2ZEXo95SvSxkPPVIHpj/UcxAayxr5uo/hoBs0XRVjpAbuCXcoHtvhWt314lcAhwZ8g==
   dependencies:
-    "@ryyppy/rescript-promise" "^2.1.0"
     jest "^27.3.1"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
@@ -503,11 +502,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
-
-"@ryyppy/rescript-promise@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@ryyppy/rescript-promise/-/rescript-promise-2.1.0.tgz#a33861274c41360cfbe872cf489f3dcb8dd526e6"
-  integrity sha512-+dW6msBrj2Lr2hbEMX+HoWCvN89qVjl94RwbYWJgHQuj8jm/izdPC0YzxgpGoEFdeAEW2sOozoLcYHxT6o5WXQ==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
