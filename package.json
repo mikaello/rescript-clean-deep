@@ -18,7 +18,7 @@
   "bugs": "https://github.com/mikaello/rescript-clean-deep/issues",
   "license": "MIT",
   "devDependencies": {
-    "@glennsl/rescript-jest": "0.11.0",
+    "@glennsl/rescript-jest": "0.13.1",
     "rescript": "10.1.4"
   },
   "dependencies": {
