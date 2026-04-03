@@ -1,4 +1,3 @@
-@deriving(abstract)
 type cleanDeepOptions = {
   cleanKeys: array<string>,
   cleanValues: array<string>,
@@ -25,16 +24,16 @@ let cleanDeep = (
   ~naNValues: bool=false,
   (),
 ): 'cleanedJsObject => {
-  let options = cleanDeepOptions(
-    ~cleanKeys,
-    ~cleanValues,
-    ~emptyArrays,
-    ~emptyObjects,
-    ~emptyStrings,
-    ~nullValues,
-    ~undefinedValues,
-    ~naNValues,
-  )
+  let options = {
+    cleanKeys,
+    cleanValues,
+    emptyArrays,
+    emptyObjects,
+    emptyStrings,
+    nullValues,
+    undefinedValues,
+    naNValues,
+  }
 
   cleanDeep(jsObject, options)
 }

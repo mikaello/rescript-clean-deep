@@ -24,7 +24,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(CleanDeep.cleanDeep(jsObject, ())) |> toEqual(
+    expect(CleanDeep.cleanDeep(jsObject, ()))->toEqual(
       %raw(`
             {
               foo: {
@@ -48,7 +48,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(CleanDeep.cleanDeep(jsObject, ())) |> toEqual(
+    expect(CleanDeep.cleanDeep(jsObject, ()))->toEqual(
       %raw(`
            {
              foo: [{
@@ -69,7 +69,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(CleanDeep.cleanDeep(jsObject, ())) |> toEqual(
+    expect(CleanDeep.cleanDeep(jsObject, ()))->toEqual(
       %raw(`
            {
              foo: {
@@ -92,7 +92,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(CleanDeep.cleanDeep(jsObject, ~emptyObjects=false, ())) |> toEqual(
+    expect(CleanDeep.cleanDeep(jsObject, ~emptyObjects=false, ()))->toEqual(
       %raw(`
            {
              biz: {
@@ -117,7 +117,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(CleanDeep.cleanDeep(jsObject, ~emptyArrays=false, ())) |> toEqual(
+    expect(CleanDeep.cleanDeep(jsObject, ~emptyArrays=false, ()))->toEqual(
       %raw(`
            {
              biz: {
@@ -140,7 +140,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(jsObject->CleanDeep.cleanDeep(~emptyStrings=false, ())) |> toEqual(
+    expect(jsObject->CleanDeep.cleanDeep(~emptyStrings=false, ()))->toEqual(
       %raw(`
            {
              foo: {
@@ -162,7 +162,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(jsObject->CleanDeep.cleanDeep(~nullValues=false, ())) |> toEqual(
+    expect(jsObject->CleanDeep.cleanDeep(~nullValues=false, ()))->toEqual(
       %raw(`
            {
              foo: {
@@ -189,7 +189,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(jsObject->CleanDeep.cleanDeep(~undefinedValues=false, ())) |> toEqual(
+    expect(jsObject->CleanDeep.cleanDeep(~undefinedValues=false, ()))->toEqual(
       %raw(`
            {
              foo: {
@@ -222,7 +222,7 @@ describe("cleanDeep()", () => {
 
     expect(
       jsObject->CleanDeep.cleanDeep(~cleanValues=["remove-this", "this-as-well"], ()),
-    ) |> toEqual(
+    )->toEqual(
       %raw(`
            {
              foo: {
@@ -252,7 +252,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(jsObject->CleanDeep.cleanDeep(~cleanKeys=["remove", "andThis"], ())) |> toEqual(
+    expect(jsObject->CleanDeep.cleanDeep(~cleanKeys=["remove", "andThis"], ()))->toEqual(
       %raw(`
            {
              foo: {
@@ -275,7 +275,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(jsObject->CleanDeep.cleanDeep()) |> toEqual(
+    expect(jsObject->CleanDeep.cleanDeep())->toEqual(
       %raw(`
            {
              remi: 'hi there',
@@ -293,7 +293,7 @@ describe("cleanDeep()", () => {
       }
       `)
 
-    expect(jsObject->CleanDeep.cleanDeep(~naNValues=true, ())) |> toEqual(
+    expect(jsObject->CleanDeep.cleanDeep(~naNValues=true, ()))->toEqual(
       %raw(`
            {
              remi: 'hi there',
