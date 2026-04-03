@@ -2,8 +2,8 @@
   "name": "rescript-clean-deep",
   "version": "2.0.0",
   "scripts": {
-    "build": "rescript build",
-    "start": "rescript build -w",
+    "build": "rescript",
+    "start": "rescript watch",
     "clean": "rescript clean",
     "pretest": "yarn run build",
     "test": "jest"
@@ -18,7 +18,7 @@
   "bugs": "https://github.com/mikaello/rescript-clean-deep/issues",
   "license": "MIT",
   "devDependencies": {
-    "@glennsl/rescript-jest": "0.11.0",
+    "@glennsl/rescript-jest": "0.13.1",
     "rescript": "12.2.0"
   },
   "dependencies": {
