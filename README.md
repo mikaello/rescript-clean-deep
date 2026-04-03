@@ -1,7 +1,7 @@
 # rescript-clean-deep
 
 [![NPM version](http://img.shields.io/npm/v/rescript-clean-deep.svg)](https://www.npmjs.org/package/rescript-clean-deep)
-[![Build Status](https://app.travis-ci.com/mikaello/rescript-clean-deep.svg?branch=master)](https://app.travis-ci.com/github/mikaello/rescript-clean-deep)
+[![Build Status](https://github.com/mikaello/rescript-clean-deep/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/mikaello/rescript-clean-deep/actions/workflows/build-and-test.yml)
 
 ReScript bindings for [clean-deep](https://github.com/nunofgs/clean-deep), a library for
 removing empty or nullable values from javascript objects.
@@ -12,20 +12,20 @@ removing empty or nullable values from javascript objects.
 yarn add rescript-clean-deep
 ```
 
-Then add `rescript-clean-deep` as a dependency to `bsconfig.json`:
+Then add `rescript-clean-deep` as a dependency to `rescript.json`:
 
 ```diff
-"bs-dependencies": [
+"dependencies": [
 +  "rescript-clean-deep"
 ]
 ```
 
 ## Example
 
-```reason
-open RescriptCleanDeep;
+```rescript
+open RescriptCleanDeep
 
-let jsObject = [%bs.raw {|
+let jsObject = %raw(`
 {
   bar: {},
   baz: null,
@@ -38,22 +38,22 @@ let jsObject = [%bs.raw {|
     txi: ''
   }
 }
-|}];
+`)
 
-let cleaned = CleanDeep.cleanDeep(jsObject, ());
+let cleaned = CleanDeep.cleanDeep(jsObject, ())
 
-Js.log(cleaned);
-/* => { biz: 'baz', qux: { baz: 'boz' } } */
+Console.log(cleaned)
+// => { biz: 'baz', qux: { baz: 'boz' } }
 
-let cleanedKeepStrings = jsObject->CleanDeep.cleanDeep(~emptyStrings=false, ());
+let cleanedKeepStrings = jsObject->CleanDeep.cleanDeep(~emptyStrings=false, ())
 
-Js.log(cleanedKeepStrings);
-/* => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } } */
+Console.log(cleanedKeepStrings)
+// => { biz: 'baz', foo: '', qux: { baz: 'boz', txi: '' } }
 
-let cleanedCustomValues = jsObject->CleanDeep.cleanDeep(~cleanValues=[|"baz"|], ());
+let cleanedCustomValues = jsObject->CleanDeep.cleanDeep(~cleanValues=["baz"], ())
 
-Js.log(cleanedCustomValues);
-/* => { qux: { baz: 'boz' } } */
+Console.log(cleanedCustomValues)
+// => { qux: { baz: 'boz' } }
 ```
 
 See also [example-project](./example).
@@ -62,5 +62,6 @@ See also [example-project](./example).
 
 If you find bugs or there are updates in
 [clean-deep](https://github.com/nunofgs/clean-deep), feel free to open an issue
-or PR. If you are upgrading any dependencies, please use yarn so `yarn.lock` is
+or PR.
+If you are upgrading any dependencies, please use yarn so `yarn.lock` is
 updated.

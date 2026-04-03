@@ -1,6 +1,5 @@
 {
   "name": "rescript-clean-deep",
-  "version": "0.1.0",
   "sources": [
     {
       "dir": "src"
