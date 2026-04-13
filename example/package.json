@@ -12,6 +12,6 @@
     "rescript": "12.2.0"
   },
   "dependencies": {
-    "rescript-clean-deep": "2.0.0"
+    "rescript-clean-deep": "2.0.1"
   }
 }

@@ -32,7 +32,7 @@
   resolved "https://registry.yarnpkg.com/@rescript/win32-x64/-/win32-x64-12.2.0.tgz#27b9facb08ceb6d3306f5f85ce428541d0943bf1"
   integrity sha512-fhf8CBj3p1lkIXPeNko3mVTKQfXXm4BoxJtR1xAXxUn43wDpd8Lox4w8/EPBbbW6C/YFQW6H7rtpY+2AKuNaDA==
 
-clean-deep@^3.4.0:
+clean-deep@3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/clean-deep/-/clean-deep-3.4.0.tgz#c465c4de1003ae13a1a859e6c69366ab96069f75"
   integrity sha512-Lo78NV5ItJL/jl+B5w0BycAisaieJGXK1qYi/9m4SjR8zbqmrUtO7Yhro40wEShGmmxs/aJLI/A+jNhdkXK8mw==
@@ -56,12 +56,12 @@ lodash.transform@^4.6.0:
   resolved "https://registry.yarnpkg.com/lodash.transform/-/lodash.transform-4.6.0.tgz#12306422f63324aed8483d3f38332b5f670547a0"
   integrity sha1-EjBkIvYzJK7YSD0/ODMrX2cFR6A=
 
-rescript-clean-deep@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/rescript-clean-deep/-/rescript-clean-deep-2.0.0.tgz#5de45eb1cc831a5bf4466580d7b7b274288c56d9"
-  integrity sha512-/A3EK0FRgXnLHcHEXuZspjbP7i3ul+GKpArcKRr9ie0vUQa6x0KIxN1RgcE7WpY8jXIHuGnqjAhsDFsNJMo8qg==
+rescript-clean-deep@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/rescript-clean-deep/-/rescript-clean-deep-2.0.1.tgz#5df7b66bd0d710f8a606c04c294daa268e2c3515"
+  integrity sha512-GWdSRBIW7LouRG/NaxVdlRCgXW54+8wRqwjhemmWg/JR2d8XRn1FKnFklgfCcYjCupU/4xygeI4MlqGd4d+E3Q==
   dependencies:
-    clean-deep "^3.4.0"
+    clean-deep "3.4.0"
 
 rescript@12.2.0:
   version "12.2.0"
