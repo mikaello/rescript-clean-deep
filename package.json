@@ -1,6 +1,6 @@
 {
   "name": "rescript-clean-deep",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "build": "rescript",
     "start": "rescript watch",
