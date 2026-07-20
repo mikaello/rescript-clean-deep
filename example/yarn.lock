@@ -56,10 +56,10 @@ lodash.transform@^4.6.0:
   resolved "https://registry.yarnpkg.com/lodash.transform/-/lodash.transform-4.6.0.tgz#12306422f63324aed8483d3f38332b5f670547a0"
   integrity sha1-EjBkIvYzJK7YSD0/ODMrX2cFR6A=
 
-rescript-clean-deep@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rescript-clean-deep/-/rescript-clean-deep-2.0.1.tgz#5df7b66bd0d710f8a606c04c294daa268e2c3515"
-  integrity sha512-GWdSRBIW7LouRG/NaxVdlRCgXW54+8wRqwjhemmWg/JR2d8XRn1FKnFklgfCcYjCupU/4xygeI4MlqGd4d+E3Q==
+rescript-clean-deep@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/rescript-clean-deep/-/rescript-clean-deep-2.0.2.tgz#62818c66f51637ec9bcf6689953cd35f9c82022e"
+  integrity sha512-mnq9M7oG4f8bO3aI/Cno8tBmrgRJO3KQSk4sWAMVnjUn36hy+MMt0MUD9XjhlMI1/K78gtlJuQtnrD83x2/5eA==
   dependencies:
     clean-deep "3.4.0"
 
